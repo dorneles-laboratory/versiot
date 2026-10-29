@@ -1,12 +1,12 @@
-name: flightscope-stack
+name: versiot-stack
 
 services:
   frontend:
     build:
       context: .
       dockerfile: Dockerfile
-    image: flightscope_frontend_prod
-    container_name: flightscope_frontend_prod
+    image: versiot_frontend_prod
+    container_name: versiot_frontend_prod
     restart: always
     networks:
       - gateway_net
@@ -18,3 +18,4 @@ services:
 networks:
   gateway_net:
     external: true
+
