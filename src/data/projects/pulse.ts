@@ -1,6 +1,7 @@
 import { IoTProject } from '../../types/project';
 
 export const pulseProject: IoTProject = {
+  slug: 'pulse',
   id: 'pulse',
   name: 'PulseScope — Monitor Biométrico Cyberpunk',
   shortName: 'PulseScope',
@@ -9,7 +10,11 @@ export const pulseProject: IoTProject = {
     'Um bio-monitor futurista inspirado em interfaces médicas cyberpunk e telemetria de astronautas. Conectado a um sensor óptico de pulso e oximetria (MAX30100 / MAX30102 ou Pulse Sensor analógico), ele detecta os picos sistólicos do fluxo sanguíneo capilar. O visualizador reproduz um coração anatômico holográfico pulsando com precisão milissegundo, um osciloscópio com traçado contínuo de eletrocardiograma (ECG) neon, medidor de saturação de oxigênio (SpO2 %) e cálculo de variabilidade da frequência cardíaca (HRV).',
   icon: '🫀',
   category: 'Saúde & Biometria',
+  categoryKey: 'health',
   difficulty: 'Avançado',
+  difficultyKey: 'advanced',
+  microcontrollers: ['ESP32', 'Arduino'],
+  featured: true,
   badge: 'Cyberpunk 3D',
   accentColor: '#ec4899',
   defaultBaud: 115200,

@@ -1,6 +1,7 @@
 import { IoTProject } from '../../types/project';
 
 export const flightscopeProject: IoTProject = {
+  slug: 'flightscope',
   id: 'flightscope',
   name: 'FlightScope — Telemetria Aeroespacial & HUD 3D',
   shortName: 'FlightScope',
@@ -9,7 +10,11 @@ export const flightscopeProject: IoTProject = {
     'Sistema de telemetria inercial de alta fidelidade conectado a uma Unidade de Medição Inercial (IMU MPU-6050) de 6 eixos e um sensor sonar ultrassônico (HC-SR04). O simulador 3D renderiza uma aeronave caça delta e uma cabine de pilotagem com Head-Up Display (HUD) em tempo real, calculando atitude (Pitch, Roll) e altitude radar com interpolação suave a até 144 FPS.',
   icon: '✈️',
   category: 'Aeroespacial',
+  categoryKey: 'aerospace',
   difficulty: 'Intermediário',
+  difficultyKey: 'intermediate',
+  microcontrollers: ['ESP32', 'Arduino'],
+  featured: true,
   badge: '3D Fotorrealista',
   accentColor: '#00e5ff',
   defaultBaud: 115200,

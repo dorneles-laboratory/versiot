@@ -1,0 +1,183 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.topbar {
+  flex-shrink: 0;
+  height: 56px;
+  background: color-mix(in srgb, var(--background) 92%, var(--card));
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  gap: 1rem;
+  z-index: 50;
+}
+
+.leftGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.logoIcon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #0284c7 0%, #00e5ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+}
+
+.separator {
+  width: 1px;
+  height: 22px;
+  background-color: var(--border);
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  text-decoration: none;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.backBtn:hover {
+  background-color: var(--accent);
+  color: var(--foreground);
+}
+
+.projectDropdown {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background-color: var(--card);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.projectDropdown:hover {
+  border-color: var(--ring);
+}
+
+.centerGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.statusBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 1px solid transparent;
+}
+
+.statusConnected {
+  background-color: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #10b981;
+}
+
+.statusDisconnected {
+  background-color: rgba(148, 163, 184, 0.12);
+  border-color: rgba(148, 163, 184, 0.3);
+  color: var(--muted-foreground);
+}
+
+.statusSimulating {
+  background-color: rgba(14, 165, 233, 0.15);
+  border-color: rgba(14, 165, 233, 0.4);
+  color: #38bdf8;
+  animation: pulseSim 2s infinite ease-in-out;
+}
+
+@keyframes pulseSim {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.65;
+  }
+}
+
+.statusDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+.rightGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btnSimulate {
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.btnSimulateActive {
+  background-color: rgba(14, 165, 233, 0.2) !important;
+  color: #38bdf8 !important;
+  border-color: #38bdf8 !important;
+}
+
+.workspaceContent {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    height: auto;
+    padding: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .centerGroup {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+}

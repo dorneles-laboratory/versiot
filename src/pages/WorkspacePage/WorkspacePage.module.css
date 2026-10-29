@@ -1,0 +1,147 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  background-color: var(--background);
+}
+
+.noticeBar {
+  background: rgba(245, 158, 11, 0.12);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 0.6rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #f59e0b;
+}
+
+.subHeader {
+  padding: 1.25rem 1.5rem;
+  background: color-mix(in srgb, var(--background) 96%, var(--card));
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.projectInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.projectIcon {
+  font-size: 2.25rem;
+}
+
+.projectTitleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.projectName {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.projectTagline {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin: 0;
+}
+
+.badgesGroup {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pillBadge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  background: var(--secondary);
+  color: var(--secondary-foreground);
+  border: 1px solid var(--border);
+}
+
+.tabNavigation {
+  padding: 0 1.5rem;
+  background: color-mix(in srgb, var(--background) 98%, var(--card));
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+}
+
+.tabBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--muted-foreground);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.tabBtn:hover {
+  color: var(--foreground);
+}
+
+.tabBtnActive {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+  font-weight: 600;
+}
+
+.tabContentArea {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.visualizerWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.scene3dContainer {
+  height: 580px;
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #060913;
+}
+
+@media (max-width: 768px) {
+  .subHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .scene3dContainer {
+    height: 420px;
+  }
+}

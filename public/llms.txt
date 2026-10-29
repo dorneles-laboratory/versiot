@@ -1,17 +1,18 @@
-# FlightScope — Telemetria de Voo 3D em Tempo Real
+# VersIOT — Central Interativa de Projetos IoT & Telemetria Visual
 
-> FlightScope é uma plataforma de visualização aeroespacial e telemetria de voo 3D em tempo real com cockpit HUD interativo, desenvolvida por Fernando Dorneles da Silva como projeto de pesquisa na Universidade Federal de Santa Maria (UFSM) e Dorneles Laboratory.
+> VersIOT é uma plataforma educacional e laboratório interativo de Internet das Coisas (IoT). Conecta microcontroladores (Arduino Uno, Nano, ESP32, Raspberry Pi Pico) diretamente ao navegador via Web Serial API, oferecendo representações visuais 3D/2D lúdicas, esquemas de ligação de sensores detalhados, códigos de firmware prontos para uso e monitor serial em tempo real.
 
-- **URL:** https://flightscope.dorneles.dev
+- **URL:** https://versiot.dorneles.dev
 - **Arquiteto & Engenheiro Responsável:** Fernando Dorneles da Silva (https://dorneles.dev)
-- **Afiliação:** Universidade Federal de Santa Maria (UFSM)
-- **Currículo Lattes:** http://lattes.cnpq.br/0532418852427960
-- **Wikidata:** https://www.wikidata.org/wiki/Q141727157
-- **LinkedIn:** https://linkedin.com/in/fernandodorneles
-- **GitHub:** https://github.com/dornelesfernando
-- **Organização GitHub:** Dorneles Laboratory (https://github.com/dorneles-laboratory)
+- **Afiliação:** Universidade Federal de Santa Maria (UFSM) & Dorneles Laboratory
+- **GitHub:** https://github.com/dorneles-laboratory/versiot
+- **Licença:** Apache-2.0
 
-## Recursos Principais
-- Visualização 3D de aeronaves e vetores de voo (Three.js e WebGL)
-- Cockpit HUD com atitude, altitude, velocidade e horizonte artificial
-- Conexão e telemetria direta via Web Serial API
+## Rotas Principais
+- `/`: Landing Page com apresentação interativa e fluxo "Como Funciona".
+- `/projetos`: Catálogo de projetos IoT com filtros por dificuldade, categoria e microcontrolador.
+- `/projetos/flightscope`: Simulador aeroespacial 3D com caça delta, cockpit HUD e MPU6050.
+- `/projetos/sonar`: Radar militar CRT 180° com servo SG90 e sensor HC-SR04.
+- `/projetos/garden`: Estufa e terrário inteligente BioScope com ciclo climático e solo.
+- `/projetos/smarthome`: Casa inteligente 3D isométrica com presença PIR e alarme de gás MQ-2.
+- `/projetos/pulse`: Monitor biométrico cyberpunk com coração 3D anatômico e ECG neon.

@@ -1,0 +1,35 @@
+{
+  "brand": "VersIOT",
+  "tagline": "Hardware Real, Simulação Virtual",
+  "nav": {
+    "home": "Início",
+    "catalog": "Catálogo",
+    "docs": "Documentação",
+    "github": "GitHub",
+    "community": "Comunidade"
+  },
+  "theme": {
+    "toggle": "Alternar tema",
+    "light": "Claro",
+    "dark": "Escuro",
+    "system": "Sistema"
+  },
+  "actions": {
+    "back": "Voltar",
+    "close": "Fechar",
+    "copy": "Copiar",
+    "copied": "Copiado!",
+    "download": "Baixar",
+    "explore": "Explorar",
+    "search": "Buscar...",
+    "filter": "Filtrar",
+    "clearFilters": "Limpar filtros",
+    "openInNewTab": "Abrir em nova aba"
+  },
+  "footer": {
+    "openSource": "Projeto Open Source desenvolvido com paixão para a comunidade Maker e IoT.",
+    "license": "Distribuído sob licença Apache-2.0",
+    "developedBy": "Desenvolvido por Fernando Dorneles da Silva",
+    "rights": "Todos os direitos reservados"
+  }
+}

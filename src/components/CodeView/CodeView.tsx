@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import { Highlight, themes } from 'prism-react-renderer';
+import { useTranslation } from 'react-i18next';
+import { Copy, Check, Download, BookOpen } from 'lucide-react';
+import { Button } from '@/components/ui/button/button';
 import { IoTProject } from '../../types/project';
 import styles from './CodeView.module.css';
 
@@ -7,6 +11,7 @@ interface CodeViewProps {
 }
 
 export const CodeView: React.FC<CodeViewProps> = ({ project }) => {
+  const { t } = useTranslation(['workspace', 'common']);
   const [copied, setCopied] = useState(false);
   const { firmware } = project;
 
@@ -37,21 +42,28 @@ export const CodeView: React.FC<CodeViewProps> = ({ project }) => {
       <div className={styles.header}>
         <div className={styles.titleArea}>
           <h2 className={styles.title}>
-            <span>💻</span> Firmware C++ / Arduino IDE — {project.shortName}
+            <span>💻</span> {t('code.title', { ns: 'workspace' })} — {project.shortName}
           </h2>
           <p className={styles.subtitle}>
-            Baud Rate recomendado: <strong>{project.defaultBaud} bps</strong> · Arquivo: <code>{firmware.filename}</code>
+            Baud Rate: <strong>{project.defaultBaud} bps</strong> · Arquivo:{' '}
+            <code>{firmware.filename}</code>
           </p>
         </div>
 
         <div className={styles.actions}>
-          <button className={styles.btnAction} onClick={handleCopy}>
-            <span>{copied ? '✅' : '📋'}</span>
-            {copied ? 'Copiado!' : 'Copiar Código'}
-          </button>
-          <button className={`${styles.btnAction} ${styles.btnPrimary}`} onClick={handleDownload}>
-            <span>💾</span> Baixar Arquivo .ino
-          </button>
+          <Button variant="outline" size="sm" onClick={handleCopy}>
+            {copied ? (
+              <Check size={14} style={{ marginRight: '6px', color: '#10b981' }} />
+            ) : (
+              <Copy size={14} style={{ marginRight: '6px' }} />
+            )}
+            <span>{copied ? t('actions.copied', { ns: 'common' }) : t('code.copy', { ns: 'workspace' })}</span>
+          </Button>
+
+          <Button variant="default" size="sm" onClick={handleDownload}>
+            <Download size={14} style={{ marginRight: '6px' }} />
+            <span>{t('code.download', { ns: 'workspace', filename: firmware.filename })}</span>
+          </Button>
         </div>
       </div>
 
@@ -59,13 +71,15 @@ export const CodeView: React.FC<CodeViewProps> = ({ project }) => {
       {firmware.libraries.length > 0 && (
         <div className={styles.librariesSection}>
           <div className={styles.libTitle}>
-            <span>📚</span> Bibliotecas Necessárias (Arduino IDE Library Manager)
+            <BookOpen size={16} />
+            <span>{t('code.libraries', { ns: 'workspace' })}</span>
           </div>
           <div className={styles.libList}>
             {firmware.libraries.map((lib, idx) => (
               <div key={idx} className={styles.libItem}>
                 <div className={styles.libName}>
-                  {lib.name} {lib.author && <span style={{ opacity: 0.7 }}>por {lib.author}</span>}
+                  {lib.name}{' '}
+                  {lib.author && <span style={{ opacity: 0.7 }}>por {lib.author}</span>}
                 </div>
                 <div className={styles.libGuide}>{lib.installGuide}</div>
               </div>
@@ -74,15 +88,43 @@ export const CodeView: React.FC<CodeViewProps> = ({ project }) => {
         </div>
       )}
 
-      {/* Bloco de Código */}
+      {/* Bloco de Código com Prism Syntax Highlighting */}
       <div className={styles.codeBox}>
         <div className={styles.codeTopBar}>
           <span>{firmware.filename}</span>
-          <span>C++ (Arduino / ESP32)</span>
+          <span>C++ / Arduino IDE</span>
         </div>
-        <pre className={styles.codeContent}>
-          <code>{firmware.code}</code>
-        </pre>
+
+        <Highlight theme={themes.nightOwl} code={firmware.code.trim()} language="cpp">
+          {({ className, style, tokens, getLineProps, getTokenProps }) => (
+            <pre className={`${styles.codeContent} ${className}`} style={style}>
+              {tokens.map((line, i) => (
+                <div
+                  key={i}
+                  {...getLineProps({ line })}
+                  style={{ display: 'flex', gap: '1rem', minHeight: '1.25rem' }}
+                >
+                  <span
+                    style={{
+                      width: '2.5rem',
+                      textAlign: 'right',
+                      userSelect: 'none',
+                      opacity: 0.4,
+                      fontSize: '0.8rem',
+                    }}
+                  >
+                    {i + 1}
+                  </span>
+                  <div>
+                    {line.map((token, key) => (
+                      <span key={key} {...getTokenProps({ token })} />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </pre>
+          )}
+        </Highlight>
       </div>
     </div>
   );

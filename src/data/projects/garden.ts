@@ -1,6 +1,7 @@
 import { IoTProject } from '../../types/project';
 
 export const gardenProject: IoTProject = {
+  slug: 'garden',
   id: 'garden',
   name: 'BioScope — Estufa & Terrário Inteligente',
   shortName: 'BioScope',
@@ -8,8 +9,12 @@ export const gardenProject: IoTProject = {
   description:
     'Um projeto completo de agricultura de precisão e terrários inteligentes. Sensores capturam temperatura ambiente e umidade do ar (DHT22), umidade do solo por sonda e radiação luminosa por LDR. O visualizador renderiza um terrário/estufa interativo onde o ciclo de sol/lua obedece à luminosidade real, gotas de chuva surgem com a umidade e uma planta virtual floresce vigorosa ou fica murcha e amarelada dependendo das condições da terra.',
   icon: '🌱',
-  category: 'Ambiente & Estufa',
+  category: 'Ambiente & Clima',
+  categoryKey: 'climate',
   difficulty: 'Iniciante',
+  difficultyKey: 'beginner',
+  microcontrollers: ['Arduino', 'ESP32', 'Raspberry Pi'],
+  featured: true,
   badge: 'Ecossistema Vivo',
   accentColor: '#10b981',
   defaultBaud: 115200,

@@ -1,6 +1,7 @@
 import { IoTProject } from '../../types/project';
 
 export const smarthomeProject: IoTProject = {
+  slug: 'smarthome',
   id: 'smarthome',
   name: 'HomeScope — Casa Inteligente 3D Interativa',
   shortName: 'HomeScope',
@@ -9,7 +10,11 @@ export const smarthomeProject: IoTProject = {
     'Uma central de automação residencial futurista (Smart Home). Utiliza sensor infravermelho de movimento (PIR HC-SR501), sensor eletroquímico de gás/fumaça (MQ-2) e fotorresistor crepuscular (LDR). Na maquete 3D isométrica, as luzes da sala e cômodos acendem dinamicamente quando alguém entra, luzes externas ligam ao anoitecer e um alarme visual pulsante com efeito de fumaça é disparado se houver vazamento de gás ou fumaça.',
   icon: '🏠',
   category: 'Domótica & Automação',
+  categoryKey: 'automation',
   difficulty: 'Intermediário',
+  difficultyKey: 'intermediate',
+  microcontrollers: ['ESP32', 'Arduino'],
+  featured: true,
   badge: 'Isométrico 3D',
   accentColor: '#8b5cf6',
   defaultBaud: 115200,

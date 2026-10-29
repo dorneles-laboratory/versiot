@@ -1,6 +1,7 @@
 import { IoTProject } from '../../types/project';
 
 export const sonarProject: IoTProject = {
+  slug: 'sonar',
   id: 'sonar',
   name: 'SonarScope — Radar Sonar Militar 180°',
   shortName: 'SonarScope',
@@ -9,7 +10,11 @@ export const sonarProject: IoTProject = {
     'Um sistema clássico e empolgante de robótica onde um sensor ultrassônico HC-SR04 é montado sobre um micro servomotor SG90. Conforme o servo varre continuamente de 15° a 165°, o microcontrolador transmite o ângulo atual e a distância detectada. O visualizador reproduz um autêntico monitor CRT de radar militar verde com feixe giratório, persistência de fósforo e detecção holográfica de alvos.',
   icon: '📡',
   category: 'Robótica & Radar',
+  categoryKey: 'robotics',
   difficulty: 'Iniciante',
+  difficultyKey: 'beginner',
+  microcontrollers: ['Arduino', 'ESP32'],
+  featured: true,
   badge: 'Radar Tático',
   accentColor: '#00ff88',
   defaultBaud: 115200,

@@ -1,7 +1,18 @@
+export type ProjectCategoryKey =
+  | 'aerospace'
+  | 'robotics'
+  | 'climate'
+  | 'automation'
+  | 'health';
+
+export type ProjectDifficultyKey = 'beginner' | 'intermediate' | 'advanced';
+
+export type MicrocontrollerType = 'ESP32' | 'Arduino' | 'Raspberry Pi';
+
 export type ProjectCategory =
   | 'Aeroespacial'
   | 'Robótica & Radar'
-  | 'Ambiente & Estufa'
+  | 'Ambiente & Clima'
   | 'Domótica & Automação'
   | 'Saúde & Biometria';
 
@@ -42,14 +53,20 @@ export interface TelemetryFieldConfig {
 }
 
 export interface IoTProject {
-  id: string;
+  slug: string;
+  id?: string; // backwards compatibility alias for slug
   name: string;
   shortName: string;
   tagline: string;
   description: string;
   icon: string;
   category: ProjectCategory;
+  categoryKey: ProjectCategoryKey;
   difficulty: ProjectDifficulty;
+  difficultyKey: ProjectDifficultyKey;
+  microcontrollers: MicrocontrollerType[];
+  featured: boolean;
+  thumbnail?: string;
   badge: string;
   accentColor: string;
   defaultBaud: number;

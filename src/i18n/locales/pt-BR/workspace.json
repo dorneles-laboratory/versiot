@@ -1,0 +1,74 @@
+{
+  "topbar": {
+    "backToCatalog": "Catálogo",
+    "switchProject": "Trocar Projeto",
+    "status": {
+      "connected": "Conectado",
+      "disconnected": "Desconectado",
+      "simulating": "Simulando"
+    },
+    "actions": {
+      "connectUsb": "Conectar USB",
+      "disconnectUsb": "Desconectar",
+      "simulate": "Simular",
+      "stopSimulate": "Parar Simulação"
+    }
+  },
+  "header": {
+    "difficulty": "Dificuldade",
+    "category": "Categoria",
+    "baud": "Taxa de transmissão: {{baud}} bps"
+  },
+  "tabs": {
+    "visualizer": "Visualizador Interativo",
+    "wiring": "Esquema de Sensores",
+    "code": "Código & Firmware",
+    "terminal": "Console Serial"
+  },
+  "wiring": {
+    "title": "Esquema de Fiação do Hardware",
+    "subtitle": "Conexões pino a pino entre o microcontrolador e os módulos eletrônicos.",
+    "componentsList": "Componentes Necessários",
+    "quantity": "Qtd: {{count}}",
+    "pinTable": {
+      "microPin": "Pino Micro",
+      "sensorPin": "Pino Sensor",
+      "sensor": "Sensor / Módulo",
+      "wireColor": "Cor do Jumper",
+      "notes": "Observações"
+    },
+    "warnings": "Avisos Elétricos & Boas Práticas",
+    "schematicDiagram": "Diagrama Esquemático"
+  },
+  "code": {
+    "title": "Firmware para o Microcontrolador",
+    "subtitle": "Código C++ pronto para carregar no Arduino IDE ou PlatformIO.",
+    "copy": "Copiar Código",
+    "download": "Baixar {{filename}}",
+    "libraries": "Bibliotecas Necessárias",
+    "instructions": "Como Carregar",
+    "payloadFormat": "Formato do Pacote Serial"
+  },
+  "terminal": {
+    "title": "Console Serial de Debug",
+    "subtitle": "Monitoramento em tempo real dos pacotes de bytes trafegados na porta USB.",
+    "clear": "Limpar Logs",
+    "autoscroll": "Auto-scroll",
+    "pause": "Pausar",
+    "resume": "Retomar",
+    "baudRate": "Baud Rate",
+    "sendPlaceholder": "Digite um comando serial (ex: RESET, CALIB)...",
+    "send": "Enviar",
+    "waiting": "Aguardando conexão ou início da simulação..."
+  },
+  "unsupported": {
+    "title": "Web Serial API não suportada",
+    "description": "Seu navegador atual não suporta conexão direta com portas seriais USB. Recomendamos utilizar o Google Chrome ou Microsoft Edge no desktop. Você ainda pode explorar toda a plataforma e interagir com o modo de Simulação!",
+    "dismiss": "Entendi"
+  },
+  "notFound": {
+    "title": "Projeto não encontrado",
+    "description": "O projeto que você está procurando não existe ou foi movido.",
+    "back": "Voltar ao Catálogo"
+  }
+}

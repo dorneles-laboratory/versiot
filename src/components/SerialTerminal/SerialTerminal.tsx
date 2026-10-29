@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Send, Trash2, Pause, Play, ScrollText } from 'lucide-react';
 import { IoTProject } from '../../types/project';
 import styles from './SerialTerminal.module.css';
 
@@ -26,6 +28,7 @@ export const SerialTerminal: React.FC<SerialTerminalProps> = ({
   onSendRaw,
   onClearLogs,
 }) => {
+  const { t } = useTranslation(['workspace', 'common']);
   const [autoScroll, setAutoScroll] = useState(true);
   const [isPaused, setIsPaused] = useState(false);
   const [inputText, setInputText] = useState('');
@@ -49,10 +52,10 @@ export const SerialTerminal: React.FC<SerialTerminalProps> = ({
       <div className={styles.topBar}>
         <div className={styles.titleArea}>
           <h2 className={styles.title}>
-            <span>📟</span> Terminal Serial & Monitor Raw
+            <span>📟</span> {t('terminal.title', { ns: 'workspace' })}
           </h2>
           <span style={{ fontSize: '13px', color: '#94a3b8' }}>
-            Fluxo bidirecional Web Serial API ({baudRate} bps)
+            {t('terminal.subtitle', { ns: 'workspace' })} ({baudRate} bps)
           </span>
         </div>
 
@@ -73,30 +76,34 @@ export const SerialTerminal: React.FC<SerialTerminalProps> = ({
             className={`${styles.btnControl} ${autoScroll ? styles.btnActive : ''}`}
             onClick={() => setAutoScroll((prev) => !prev)}
           >
-            <span>📜</span> Auto-scroll: {autoScroll ? 'ON' : 'OFF'}
+            <ScrollText size={14} />
+            <span>{t('terminal.autoscroll', { ns: 'workspace' })}: {autoScroll ? 'ON' : 'OFF'}</span>
           </button>
 
           <button
             className={`${styles.btnControl} ${isPaused ? styles.btnActive : ''}`}
             onClick={() => setIsPaused((prev) => !prev)}
           >
-            <span>{isPaused ? '▶️' : '⏸️'}</span> {isPaused ? 'Retomar' : 'Pausar'}
+            {isPaused ? <Play size={14} /> : <Pause size={14} />}
+            <span>{isPaused ? t('terminal.resume', { ns: 'workspace' }) : t('terminal.pause', { ns: 'workspace' })}</span>
           </button>
 
           <button className={styles.btnControl} onClick={onClearLogs}>
-            <span>🗑️</span> Limpar
+            <Trash2 size={14} />
+            <span>{t('terminal.clear', { ns: 'workspace' })}</span>
           </button>
         </div>
       </div>
 
       <div className={styles.hint}>
-        <strong>Formato esperado para {project.shortName}:</strong> <code>{project.samplePayload}</code>
+        <strong>{t('code.payloadFormat', { ns: 'workspace' })} [{project.shortName}]:</strong>{' '}
+        <code>{project.samplePayload}</code>
       </div>
 
       <div ref={terminalWindowRef} className={styles.terminalWindow}>
         {logs.length === 0 ? (
           <div className={styles.lineEmpty}>
-            Nenhuma linha serial recebida ainda. Conecte o USB ou ative a Simulação para visualizar dados.
+            {t('terminal.waiting', { ns: 'workspace' })}
           </div>
         ) : (
           logs.map((entry) => (
@@ -125,12 +132,13 @@ export const SerialTerminal: React.FC<SerialTerminalProps> = ({
         <input
           type="text"
           className={styles.inputField}
-          placeholder="Digite um payload ou comando serial para enviar ao microcontrolador..."
+          placeholder={t('terminal.sendPlaceholder', { ns: 'workspace' })}
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
         />
         <button type="submit" className={styles.btnSend}>
-          Enviar Linha
+          <Send size={14} style={{ marginRight: '6px' }} />
+          <span>{t('terminal.send', { ns: 'workspace' })}</span>
         </button>
       </form>
     </div>

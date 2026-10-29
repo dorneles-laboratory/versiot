@@ -1,0 +1,63 @@
+{
+  "hero": {
+    "badge": "Plataforma Educacional Open Source",
+    "title": "Hardware Real, Simulação Virtual",
+    "subtitle": "Conecte seu microcontrolador diretamente ao navegador via Web Serial. Visualize telemetria em tempo real com gráficos, instrumentos HUD e cenas 3D interativas — sem instalar nenhum software extra.",
+    "ctaPrimary": "Explorar Catálogo",
+    "ctaSecondary": "Ver no GitHub"
+  },
+  "howItWorks": {
+    "badge": "Como Funciona",
+    "title": "Do circuito à simulação em 3 passos simples",
+    "subtitle": "Elimine a complexidade de compilar dashboards desktop. Tudo roda nativamente no seu navegador.",
+    "step1": {
+      "number": "01",
+      "title": "Conecte o Cabo USB",
+      "description": "Plugue seu Arduino, ESP32 ou Raspberry Pi Pico na porta USB do computador. Nossos drivers utilizam o padrão W3C Web Serial."
+    },
+    "step2": {
+      "number": "02",
+      "title": "Carregue o Firmware",
+      "description": "Copie ou baixe o código C++ pronto com um clique. Grave pelo Arduino IDE ou PlatformIO com as bibliotecas indicadas."
+    },
+    "step3": {
+      "number": "03",
+      "title": "Interaja em 3D",
+      "description": "Mova seus sensores no mundo real e veja a telemetria animar aviões militares, radares sonar e monitores médicos em 60 FPS."
+    }
+  },
+  "featured": {
+    "badge": "Projetos em Destaque",
+    "title": "Laboratório Vivo de Telemetria",
+    "subtitle": "Experimente nossos projetos prontos para usar ou crie o seu próprio.",
+    "viewAll": "Ver todos os projetos",
+    "exploreProject": "Abrir Workspace"
+  },
+  "features": {
+    "badge": "Recursos",
+    "title": "Tecnologia de ponta pensada para makers",
+    "item1": {
+      "title": "Web Serial API Nativa",
+      "description": "Comunicação bidirecional direta de 9600 a 115200 bps sem necessidade de bridge serial, servidores Node ou extensões."
+    },
+    "item2": {
+      "title": "Motor Gráfico 3D (Three.js)",
+      "description": "Simulações com aceleração por hardware via WebGL/WebGPU com física e interpolação de movimento suave."
+    },
+    "item3": {
+      "title": "Modo Simulação Autônomo",
+      "description": "Não tem os componentes eletrônicos em mãos? Inicie a simulação matemática com ruído gaussiano realista e teste instantaneamente."
+    },
+    "item4": {
+      "title": "Esquemas de Ligação Didáticos",
+      "description": "Tabelas e diagramas pin-a-pin com código de cores para você montar seu circuito sem risco de curto."
+    }
+  },
+  "tech": {
+    "title": "Compatibilidade de Navegadores",
+    "description": "A Web Serial API é suportada nativamente no Google Chrome, Microsoft Edge e Opera para Windows, macOS, Linux e ChromeOS.",
+    "ctaTitle": "Pronto para dar vida aos seus circuitos?",
+    "ctaSubtitle": "Acesse a galeria interativa e comece a simular agora mesmo.",
+    "ctaButton": "Começar a Explorar"
+  }
+}

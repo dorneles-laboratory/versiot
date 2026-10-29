@@ -1,0 +1,52 @@
+{
+  "flightscope": {
+    "name": "FlightScope",
+    "shortName": "FlightScope",
+    "tagline": "Telemetria Aeroespacial & HUD Militar 3D",
+    "description": "Simulador de voo militar 3D fotorrealista com cockpit 1:1, Head-Up Display (HUD) tático e barreira LiDAR reativa aos ângulos de arfagem (Pitch), rolamento (Roll) e altitude radar.",
+    "category": "Aeroespacial",
+    "difficulty": "Intermediário",
+    "badge": "3D Fotorrealista",
+    "payloadFormatDescription": "Linhas CSV formatadas como: Pitch:X.XX,Roll:Y.YY,Radar_cm:Z.ZZ"
+  },
+  "sonar": {
+    "name": "SonarScope",
+    "shortName": "SonarScope",
+    "tagline": "Radar Sonar Militar 180° com Varredura CRT",
+    "description": "Tela de radar militar circular com feixe de varredura sincronizado a um micro servo SG90 e sensor ultrassônico HC-SR04, exibindo anéis de distância e rastreamento de alvos com rastro de fósforo.",
+    "category": "Robótica & Radar",
+    "difficulty": "Iniciante",
+    "badge": "Radar CRT 180°",
+    "payloadFormatDescription": "Linhas de texto simples no formato: ANG:XX,DIST:YY (ângulo de 15° a 165° e distância em centímetros)."
+  },
+  "garden": {
+    "name": "BioScope",
+    "shortName": "BioScope",
+    "tagline": "Estufa & Terrário Inteligente com Clima Reativo",
+    "description": "Bioma botânico virtual reativo em tempo real à luminosidade (LDR), temperatura/umidade do ar (DHT22) e umidade do solo, com animações de chuva, ciclo solar e estado vital das plantas.",
+    "category": "Ambiente & Clima",
+    "difficulty": "Iniciante",
+    "badge": "Bioma Vivo 2D/3D",
+    "payloadFormatDescription": "Linhas no formato: TEMP:XX.X,HUM:YY.Y,SOIL:ZZ,LDR:WW"
+  },
+  "smarthome": {
+    "name": "HomeScope",
+    "shortName": "HomeScope",
+    "tagline": "Maquete Isométrica 3D de Automação Residencial",
+    "description": "Visualização isométrica de casa inteligente com detecção de presença humana por infravermelho (PIR), monitor de alarme para vazamento de gases/fumaça (MQ-2) e iluminação crepuscular automatizada.",
+    "category": "Domótica & Automação",
+    "difficulty": "Intermediário",
+    "badge": "Maquete 3D",
+    "payloadFormatDescription": "Linhas no formato: PIR:0|1,GAS:0|1,LDR:0-100,LAMP:0|1"
+  },
+  "pulse": {
+    "name": "PulseScope",
+    "shortName": "PulseScope",
+    "tagline": "Monitor Biométrico Cyberpunk com Coração 3D",
+    "description": "Estação biomédica futurista com coração anatômico pulsando em sincronia com os batimentos por minuto (BPM), osciloscópio ECG neon traçando ondas P-Q-R-S-T e saturação periférica de oxigênio (SpO2).",
+    "category": "Saúde & Biometria",
+    "difficulty": "Avançado",
+    "badge": "Bio-Holográfico",
+    "payloadFormatDescription": "Linhas no formato: BPM:XX,SPO2:YY,ECG_VAL:ZZZ"
+  }
+}

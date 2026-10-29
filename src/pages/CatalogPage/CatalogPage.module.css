@@ -1,0 +1,307 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.headerArea {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: var(--muted-foreground);
+}
+
+.searchBar {
+  position: relative;
+  width: 100%;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.85rem 1rem 0.85rem 2.85rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background-color: var(--card);
+  color: var(--foreground);
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.15s ease;
+}
+
+.searchInput:focus {
+  border-color: var(--ring);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted-foreground);
+  pointer-events: none;
+}
+
+.clearSearchBtn {
+  position: absolute;
+  right: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--muted-foreground);
+  cursor: pointer;
+  padding: 4px;
+}
+
+.contentLayout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* ==========================================================================
+   Filtros Laterais
+   ========================================================================== */
+.filterSidebar {
+  position: sticky;
+  top: 5.5rem;
+  border-radius: 14px;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.filterGroupTitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--foreground);
+}
+
+.filterOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.filterBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.45rem 0.75rem;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--muted-foreground);
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s ease;
+}
+
+.filterBtn:hover {
+  background-color: var(--accent);
+  color: var(--foreground);
+}
+
+.filterBtnActive {
+  background-color: color-mix(in srgb, var(--primary) 12%, transparent);
+  border-color: color-mix(in srgb, var(--primary) 30%, transparent);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.clearAllBtn {
+  width: 100%;
+}
+
+/* ==========================================================================
+   Grid de Projetos
+   ========================================================================== */
+.projectsArea {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.resultsCount {
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+  font-weight: 500;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.projectCard {
+  border-radius: 14px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.projectCard:hover {
+  transform: translateY(-3px);
+  border-color: var(--ring);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.cardIconTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.projectIcon {
+  font-size: 2rem;
+}
+
+.projectName {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.favBtn {
+  background: none;
+  border: none;
+  color: var(--muted-foreground);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  transition: color 0.15s ease;
+}
+
+.favBtnActive {
+  color: #ef4444;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.projectDescription {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tagGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tagPill {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  background: var(--secondary);
+  color: var(--secondary-foreground);
+  font-weight: 500;
+}
+
+.microPill {
+  font-size: 0.72rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--primary) 8%, transparent);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  gap: 0.5rem;
+}
+
+.baudIndicator {
+  font-size: 0.75rem;
+  font-family: monospace;
+  color: var(--muted-foreground);
+}
+
+/* ==========================================================================
+   Empty State
+   ========================================================================== */
+.emptyState {
+  padding: 4rem 2rem;
+  border-radius: 14px;
+  border: 2px dashed var(--border);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.emptyTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.emptyDesc {
+  font-size: 0.9rem;
+  color: var(--muted-foreground);
+  max-width: 450px;
+}
+
+@media (max-width: 900px) {
+  .contentLayout {
+    grid-template-columns: 1fr;
+  }
+  .filterSidebar {
+    position: static;
+  }
+}

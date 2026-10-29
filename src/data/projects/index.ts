@@ -13,8 +13,13 @@ export const ALL_PROJECTS: IoTProject[] = [
   pulseProject,
 ];
 
-export function getProjectById(id: string): IoTProject | undefined {
-  return ALL_PROJECTS.find((p) => p.id === id);
+export function getProjectBySlug(slug: string): IoTProject | undefined {
+  return ALL_PROJECTS.find((p) => p.slug === slug || p.id === slug);
 }
 
-export const DEFAULT_PROJECT_ID = 'flightscope';
+export function getProjectById(id: string): IoTProject | undefined {
+  return getProjectBySlug(id);
+}
+
+export const DEFAULT_PROJECT_SLUG = 'flightscope';
+export const DEFAULT_PROJECT_ID = DEFAULT_PROJECT_SLUG;

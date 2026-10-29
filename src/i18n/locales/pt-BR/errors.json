@@ -1,0 +1,13 @@
+{
+  "serial": {
+    "connectionFailed": "Falha ao abrir a porta serial USB. Verifique se o dispositivo está conectado e se outra aplicação (como a Arduino IDE) não está bloqueando a porta.",
+    "physicalDisconnect": "O dispositivo USB foi desconectado fisicamente da porta.",
+    "deviceConnected": "Dispositivo USB detectado na porta.",
+    "unsupportedBrowser": "Seu navegador não suporta a Web Serial API. Utilize o Google Chrome ou Microsoft Edge no desktop.",
+    "baudRateChanged": "Taxa de baud rate alterada para {{baud}} bps.",
+    "sendFailed": "Falha ao enviar dados pela porta serial."
+  },
+  "generic": {
+    "somethingWentWrong": "Ocorreu um erro inesperado. Tente recarregar a página."
+  }
+}

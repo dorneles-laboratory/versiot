@@ -1,0 +1,168 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: color-mix(in srgb, var(--background) 82%, transparent);
+  border-bottom: 1px solid var(--border);
+  transition: border-color 0.2s ease;
+}
+
+.navWrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+}
+
+.logoIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #0284c7 0%, #00e5ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 0 16px rgba(0, 229, 255, 0.4);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navLink {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  transition: color 0.15s ease;
+}
+
+.navLink:hover {
+  color: var(--foreground);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  border-top: 1px solid var(--border);
+  background-color: color-mix(in srgb, var(--background) 95%, var(--card));
+  padding: 3rem 1.5rem 2rem;
+  margin-top: auto;
+}
+
+.footerContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footerTop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footerBrand {
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footerBrandTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.footerBrandDesc {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  line-height: 1.6;
+}
+
+.footerColGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.footerCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footerColTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--foreground);
+}
+
+.footerLink {
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+  transition: color 0.15s ease;
+}
+
+.footerLink:hover {
+  color: var(--foreground);
+}
+
+.footerBottom {
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--muted-foreground);
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+}

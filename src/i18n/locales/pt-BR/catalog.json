@@ -1,0 +1,50 @@
+{
+  "header": {
+    "title": "Catálogo de Projetos IoT",
+    "subtitle": "Explore projetos interativos prontos para testar com hardware real ou através do motor de simulação integrada."
+  },
+  "search": {
+    "placeholder": "Buscar por nome, sensor, microcontrolador ou categoria...",
+    "results": "{{count}} projeto encontrado",
+    "results_plural": "{{count}} projetos encontrados"
+  },
+  "filters": {
+    "title": "Filtros",
+    "clear": "Limpar filtros",
+    "difficulty": {
+      "title": "Nível de Dificuldade",
+      "all": "Todos os níveis",
+      "beginner": "Iniciante",
+      "intermediate": "Intermediário",
+      "advanced": "Avançado"
+    },
+    "microcontroller": {
+      "title": "Microcontrolador",
+      "all": "Todos",
+      "esp32": "ESP32",
+      "arduino": "Arduino (Uno/Nano)",
+      "raspberry": "Raspberry Pi Pico"
+    },
+    "category": {
+      "title": "Categoria",
+      "all": "Todas as categorias",
+      "aerospace": "Aeroespacial",
+      "robotics": "Robótica & Radar",
+      "climate": "Ambiente & Clima",
+      "automation": "Domótica & Automação",
+      "health": "Saúde & Biometria"
+    }
+  },
+  "card": {
+    "badge3D": "3D Interativo",
+    "difficulty": "Dificuldade",
+    "baud": "Baud Rate",
+    "sensors": "Sensores",
+    "openWorkspace": "Abrir Espaço de Trabalho"
+  },
+  "empty": {
+    "title": "Nenhum projeto encontrado",
+    "description": "Não encontramos nenhum projeto com os filtros selecionados. Tente ajustar os termos de busca ou remover alguns filtros.",
+    "clearAction": "Resetar filtros"
+  }
+}
